@@ -71,7 +71,7 @@ header {
 .home {
     display: flex;
     justify-content: space-between;
-
+    gap: 20px;
     h1 {
         font-size: 14px;
         font-weight: bold;
@@ -113,6 +113,8 @@ header {
         width: 55%;
         text-align: left;
         padding-right: 80px;
+        max-width: 600px;
+
     }
 
     .home-images {
@@ -122,6 +124,13 @@ header {
         display: flex;
         gap: 20px;
         justify-content: center;
+    }
+
+    
+    .home-images img {
+        max-width: 100%; 
+        height: auto;
+        object-fit: contain; 
     }
 }
 
@@ -149,7 +158,6 @@ header {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-
     h1 {
         font-size: 14px;
         font-weight: bold;
@@ -201,6 +209,12 @@ header {
         display: flex;
         margin-right: 50px;
         justify-content: center;
+    }
+
+    .about-images img {
+        max-width: 100%; 
+        height: auto;
+        object-fit: contain; 
     }
 }
 

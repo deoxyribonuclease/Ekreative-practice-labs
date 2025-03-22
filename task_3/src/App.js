@@ -16,34 +16,37 @@ function App() {
   }, [selectedPalette]);
 
   const handlePaletteSelect = (palette) => {
-    setTransitionType('entering-colors');
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setVisibleView('palette');
-      setSelectedPalette(palette);
-    }, 500); 
-    
-
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 1000); 
+    if (!isTransitioning) { 
+      setTransitionType('entering-colors');
+      setIsTransitioning(true);
+  
+      setTimeout(() => {
+        setVisibleView('palette');
+        setSelectedPalette(palette);
+      }, 500); 
+  
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000); 
+    }
   };
   
   const handleBackClick = () => {
-
-    setTransitionType('entering-palette');
-    setIsTransitioning(true);
-    
-    setTimeout(() => {
-      setVisibleView('list');
-      setSelectedPalette(null);
-    }, 500); 
-    
-
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 1000); 
+    if (!isTransitioning) {  
+      setTransitionType('entering-palette');
+      setIsTransitioning(true);
+  
+      setTimeout(() => {
+        setVisibleView('list');
+        setSelectedPalette(null);
+      }, 500); 
+  
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000); 
+    }
   };
+  
 
   return (
     <div className="App">

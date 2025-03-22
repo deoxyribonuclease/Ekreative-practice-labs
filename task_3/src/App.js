@@ -13,21 +13,20 @@ function App() {
   
   useEffect(() => {
     setVisibleView(selectedPalette ? 'palette' : 'list');
-  }, []);
+  }, [selectedPalette]);
 
   const handlePaletteSelect = (palette) => {
     setTransitionType('entering-colors');
     setIsTransitioning(true);
-    
     setTimeout(() => {
       setVisibleView('palette');
       setSelectedPalette(palette);
-    }, 400); 
+    }, 500); 
     
 
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 800); 
+    }, 1000); 
   };
   
   const handleBackClick = () => {
@@ -38,12 +37,12 @@ function App() {
     setTimeout(() => {
       setVisibleView('list');
       setSelectedPalette(null);
-    }, 400); 
+    }, 500); 
     
 
     setTimeout(() => {
       setIsTransitioning(false);
-    }, 800); 
+    }, 1000); 
   };
 
   return (

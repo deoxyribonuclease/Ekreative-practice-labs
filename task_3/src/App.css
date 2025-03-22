@@ -458,14 +458,18 @@ body {
   background-color: white;
   z-index: 9;
   pointer-events: none;
+  background-image: url(./assets/evaporate-disappear.gif);
+  background-size: 50%;
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 
 .page-transition.entering-colors {
-  animation: slideInLeftOutRight 0.8s forwards;
+  animation: slideInLeftOutRight 1s forwards;
 }
 
 .page-transition.entering-palette {
-  animation: slideInRightOutLeft 0.8s forwards;
+  animation: slideInRightOutLeft 1s forwards;
 }
 
 @keyframes slideInLeftOutRight {

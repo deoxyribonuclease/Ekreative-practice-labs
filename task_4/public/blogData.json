@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Exploring Vue.js for Beginners",
+    "excerpt": "An introduction to Vue.js and its core concepts...",
+    "category": "Frontend Development",
+    "image": "ba.png",
+    "date": "28 Feb 2024",
+    "author": {
+      "name": "John Doe",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Mastering Python for Data Science",
+    "excerpt": "A comprehensive guide to Python's role in data science...",
+    "category": "Data Science",
+    "image": "ba.png",
+    "date": "10 Feb 2024",
+    "author": {
+      "name": "Jane Smith",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Introduction to Docker Containers",
+    "excerpt": "Learn the basics of Docker and containerization...",
+    "category": "DevOps",
+    "image": "ba.png",
+    "date": "5 Jan 2024",
+    "author": {
+      "name": "Chris Brown",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Building Scalable Web Apps with Node.js",
+    "excerpt": "A guide to building scalable web applications using Node.js...",
+    "category": "Backend Development",
+    "image": "ba.png",
+    "date": "18 Dec 2023",
+    "author": {
+      "name": "Sarah Lee",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Getting Started with GraphQL",
+    "excerpt": "Learn the fundamentals of GraphQL and how to use it in modern web apps...",
+    "category": "API Development",
+    "image": "ba.png",
+    "date": "22 Nov 2023",
+    "author": {
+      "name": "Daniel Green",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Building Mobile Apps with Flutter",
+    "excerpt": "An introductory guide to building cross-platform mobile apps with Flutter...",
+    "category": "Mobile Development",
+    "image": "ba.png",
+    "date": "10 Oct 2023",
+    "author": {
+      "name": "Emily White",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Automating Deployment with Jenkins",
+    "excerpt": "Learn how to use Jenkins for Continuous Integration and Continuous Delivery...",
+    "category": "DevOps",
+    "image": "ba.png",
+    "date": "5 Sep 2023",
+    "author": {
+      "name": "Michael Black",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Understanding Cloud Computing",
+    "excerpt": "A beginner's guide to the fundamentals of cloud computing...",
+    "category": "Cloud Computing",
+    "image": "ba.png",
+    "date": "15 Aug 2023",
+    "author": {
+      "name": "Olivia Green",
+      "avatar": "images.jpg"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Exploring Machine Learning with TensorFlow",
+    "excerpt": "A hands-on guide to machine learning using TensorFlow...",
+    "category": "AI & ML",
+    "image": "ba.png",
+    "date": "30 Jul 2023",
+    "author": {
+      "name": "David Clark",
+      "avatar": "images.jpg"
+    }
+  }
+]

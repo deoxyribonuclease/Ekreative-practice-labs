@@ -1,0 +1,608 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90vh;
+  padding: 20px;
+  margin-top: 64px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* хедер */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+}
+
+/* форма */
+.form-container {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 560px;
+  overflow: hidden;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e6eeff;
+  color: #5182f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.company-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+}
+
+/* прогрес бар */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex: 1;
+  margin: 0 135px;
+}
+
+.progress-step {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.progress-step.active {
+  background-color: #2684ff;
+}
+
+.progress-line {
+  flex: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 0 4px;
+  max-width: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.progress-line.active {
+  background-color: #2684ff;
+}
+
+/* формаа */
+.form-content {
+  padding: 24px;
+}
+
+.form-step {
+  max-width: 100%;
+}
+
+.form-step h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* конфіденц */
+.privacy-notice {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px;
+  background-color: #F0F2F4;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.border-container {
+  border-radius: 8px;
+  border: 1px solid #E2E4E5;
+  padding: 16px;
+}
+
+.privacy-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.privacy-text {
+  font-size: 14px;
+  color: #666;
+  flex: 1;
+}
+
+.close-notice {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+/* групові форми */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 8px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: transparent;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: #2684ff;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.form-group .hint-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.error {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* інпут телефон */
+.phone-input {
+  display: flex;
+  gap: 8px;
+}
+
+.country-code {
+  width: 150px !important;
+  flex-shrink: 0;
+}
+
+.conf-code {
+  letter-spacing: 12px;
+}
+
+.phone-display {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  border: 1px solid #E2E4E5;
+}
+
+.phone-display p {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.status-text {
+  color: #888;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  color: #2684ff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+/* кнопки */
+.button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+}
+
+.button.primary {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #BBBFC1;
+  color: black;
+}
+
+.button.primary:hover {
+  background-color: #dcdbdb;
+}
+
+.button.link {
+  background: none;
+  color: #2684ff;
+  padding: 12px 0;
+}
+
+.button.link:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  font-size: 20px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+/* пароль */
+.password-strength {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.password-strength .check-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  color: white;
+  font-size: 10px;
+}
+
+.password-strength.weak .check-icon {
+  background-color: #e53935;
+}
+
+.password-strength.medium .check-icon {
+  background-color: #ffb74d;
+}
+
+.password-strength.good .check-icon {
+  background-color: #43a047;
+}
+
+.password-strength.weak {
+  color: #e53935;
+}
+
+.password-strength.medium {
+  color: #f57c00;
+}
+
+.password-strength.good {
+  color: #43a047;
+}
+
+.phone-confirmed {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #E2E4E5;
+}
+
+.phone-confirmed .check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #43a047;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.terms-agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.terms-agreement input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.terms-agreement label {
+  font-size: 14px;
+}
+
+.terms-link {
+  color: #2684ff;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.personal-data-section h3,
+.contacts-section h3,
+.address-section h3,
+.social-networks h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.personal-data-section p,
+.contacts-section p,
+.address-section p,
+.social-networks p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* дн */
+.dob-pob {
+  display: flex;
+  gap: 16px;
+}
+
+.dob-pob .form-group {
+  flex: 1;
+}
+
+/* контакт */
+.contact-input {
+  position: relative;
+}
+
+.contact-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.contact-input input {
+  padding-left: 40px;
+}
+
+/* соц */
+.social-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.social-text-input {
+  width: 100%;
+  padding: 8px 8px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: transparent;
+}
+
+.social-text-input:focus {
+  border-bottom-color: #2684ff;
+  outline: none;
+}
+
+.remove-social-btn {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 20px;
+  border: none;
+  color: black;
+}
+
+.remove-social-btn:hover {
+  background-color: #dcdbdb;
+}
+
+.platform-select {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  overflow: hidden;
+  flex: 0 0 140px;
+}
+
+.platform-select select {
+  border: none;
+  background: transparent;
+  padding: 12px 8px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.platform-select select:focus {
+  border-bottom-color: #2684ff;
+  outline: none;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.social-input .social-icon {
+  background-color: #1877f2;
+}
+
+.social-input input {
+  flex: 1;
+}
+
+.add-more {
+  background: none;
+  border: none;
+  color: #2684ff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.add-more:before {
+  content: "+";
+  margin-right: 4px;
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+
+.country-zip {
+  display: flex;
+  gap: 16px;
+}
+
+.country-zip .form-group {
+  flex: 1;
+}

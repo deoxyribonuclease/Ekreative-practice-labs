@@ -9,7 +9,7 @@ const Footer = () => {
                         <div className="footer-logo">
                             <div className="footer-logo-icon"></div>
                             <span>Untitled UI</span>
-                        </div>ы
+                        </div>
                         <div className="footer-links">
                             <div className="footer-link-group">
                                 <a href="/" className="footer-link">Overview</a>
@@ -18,7 +18,7 @@ const Footer = () => {
                                 <a href="/" className="footer-link">Careers</a>
                                 <a href="/" className="footer-link">Help</a>
                                 <a href="/" className="footer-link">Privacy</a>
-                            </div>ы
+                            </div>
                         </div>
                     </div>
 

@@ -1,12 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {useForm} from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export const DeliveryAddress = ({ onSubmit, updateUserData, userData }) => {
-    const [countries, setCountries] = useState([]);
-    const [cities, setCities] = useState([]);
-    const [selectedCountry, setSelectedCountry] = useState(userData.address?.country || 'USA');
-    // eslint-disable-next-line no-use-before-define
-    const watchCountry = watch('country');
     const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm({
         defaultValues: {
             street: userData.address?.street || '',
@@ -16,6 +11,11 @@ export const DeliveryAddress = ({ onSubmit, updateUserData, userData }) => {
             optional: userData.address?.optional || ''
         }
     });
+
+    const [countries, setCountries] = useState([]);
+    const [cities, setCities] = useState([]);
+    const watchCountry = watch('country');
+    const [selectedCountry, setSelectedCountry] = useState(userData.address?.country || 'USA');
 
     useEffect(() => {
         fetch('https://countriesnow.space/api/v0.1/countries/positions')
@@ -76,7 +76,7 @@ export const DeliveryAddress = ({ onSubmit, updateUserData, userData }) => {
 
     return (
         <div className="form-step">
-            <h2 style={{fontSize:"32px"}}>Profile info</h2>
+            <h2 style={{ fontSize: "32px" }}>Profile info</h2>
             <p className="form-description">
                 Fill in the data for profile. It will take a couple of minutes.
                 You only need a passport.
@@ -136,7 +136,7 @@ export const DeliveryAddress = ({ onSubmit, updateUserData, userData }) => {
                             </div>
                         </div>
 
-                        <div className="form-group" style={{marginBottom:"0"}}>
+                        <div className="form-group" style={{ marginBottom: "0" }}>
                             <label>Optional</label>
                             <input
                                 type="text"
@@ -146,7 +146,7 @@ export const DeliveryAddress = ({ onSubmit, updateUserData, userData }) => {
                         </div>
                     </div>
                 </div>
-                <button type="submit" className="button primary" style={{marginTop:"20px"}}>Save</button>
+                <button type="submit" className="button primary" style={{ marginTop: "20px" }}>Save</button>
             </form>
         </div>
     );

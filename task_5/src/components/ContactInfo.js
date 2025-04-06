@@ -3,10 +3,7 @@ import { useForm } from 'react-hook-form';
 
 export const ContactInfo = ({ nextStep, updateUserData, userData }) => {
     const [socials, setSocials] = useState(
-        userData.contacts?.socials || [
-            { platform: 'Skype', username: '@alex_92' },
-            { platform: 'Facebook', username: '@profile' }
-        ]
+        userData.contacts?.socials
     );
 
     const { register, handleSubmit, formState: { errors } } = useForm({

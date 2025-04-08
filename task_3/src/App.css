@@ -7,8 +7,9 @@
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+   background-color: #3c40c6;
+  background-image: url(./assets/stars-opacity.0979c1.svg);
+ background-size: auto; 
 }
 
 .App {
@@ -71,8 +72,6 @@ body {
   height: calc(100vh - 29px); 
   display: flex;
   flex-direction: column;
-  background-color: #3c40c6;
-  background-image: url(./assets/stars-opacity.0979c1.svg);
 }
 
 .palette-list {
